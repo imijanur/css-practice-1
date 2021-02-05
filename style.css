@@ -1,42 +1,45 @@
 body{
-    background: #ff008b;
+    background: #ff90b3;
     padding: 0;
     margin: 0;
 }
-.container{
-    margin: 100px auto;
-    width: 600px;
-}
-.imageBox{
-    position: relative;
-    overflow: hidden;
-}
-.imageBox img{
-    width: 100%;
+.text{
+    margin: 250px 300px;
+    text-align: center;
+    display: inline-block;
     transition: .5s;
 }
-.textBox{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 0, 0, .9);
-    transition: .5s;
-}
-.textBox h1{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #fff;
+.text span{
+    background: #fff;
+    width: 100px;
+    height: 120px;
+    display: block;
+    line-height: 120px;
     font-family: arial;
+    font-weight: bold;
+    color: #a0a0a0;
+    font-size: 40px;
+    float: left;
+    transition: .5s;
 }
-.imageBox:hover .textBox{
-    left: 0%;
+.text span:nth-child(1){
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
-.imageBox:hover img{
-    transform: scale(1.2);
+.text span:nth-child(7){
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.text:hover span:nth-child(odd){
+    transform: skewY(-15deg);
+    color: #b5b5b5;
+    box-shadow: 0 60px 20px rgba(0,0,0, .1);
+}
+.text:hover span:nth-child(even){
+    transform: skewY(15deg);
+    color: #b5b5b5;
+    box-shadow: 0 60px 20px rgba(0,0,0, .1), inset 0px 0 30px rgba(0, 0, 0, .2);
+}
+.text:hover{
+    transform: rotateX(35deg);
 }
