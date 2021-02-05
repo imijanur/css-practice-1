@@ -47,4 +47,5 @@ body{
 .container:hover .textBox{
     opacity: 1;
     transform: rotateX(0deg);
+    transition-delay: .3s;
 }
